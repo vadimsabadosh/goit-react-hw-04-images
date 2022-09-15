@@ -5,11 +5,11 @@ import ImageGalleryItem from 'components/ImageGalleryItem';
 export default function ImageGallery({ gallery }) {
   return (
     <ul className="gallery">
-      {gallery.map(item => (
+      {gallery.map(({ webformatURL, largeImageURL, id }) => (
         <ImageGalleryItem
-          webformatURL={item.webformatURL}
-          largeImageURL={item.largeImageURL}
-          key={item.id}
+          webformatURL={webformatURL}
+          largeImageURL={largeImageURL}
+          key={id}
         />
       ))}
     </ul>
